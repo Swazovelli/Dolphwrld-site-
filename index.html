@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWAZO | Cinematic Rapper Homepage</title>
+  <meta
+    name="description"
+    content="Official homepage for SWAZO. A dark, cinematic rapper website with featured music and artist identity."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Cinzel:wght@600;700&family=Metal+Mania&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <!-- Full-screen intro that plays over the loaded homepage before fading away. -->
+  <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
+    <div class="intro-frame">
+      <video
+        class="intro-video"
+        id="intro-video"
+        autoplay
+        playsinline
+        preload="auto"
+        data-intro-mobile-src="intro .mp4"
+        data-intro-desktop-src="intro fr.mp4"
+      >
+      </video>
+    </div>
+  </div>
+  <div class="space-backdrop" aria-hidden="true"></div>
+  <canvas class="starfield-canvas stars-layer" aria-hidden="true"></canvas>
+  <div class="stellar-crosses cross-stars-layer" aria-hidden="true">
+    <span class="cross-star cross-star-1"></span>
+    <span class="cross-star cross-star-2"></span>
+    <span class="cross-star cross-star-3"></span>
+    <span class="cross-star cross-star-4"></span>
+    <span class="cross-star cross-star-5"></span>
+    <span class="cross-star cross-star-6"></span>
+    <span class="cross-star cross-star-7"></span>
+    <span class="cross-star cross-star-8"></span>
+    <span class="cross-star cross-star-9"></span>
+    <span class="cross-star cross-star-10"></span>
+    <span class="cross-star cross-star-11"></span>
+    <span class="cross-star cross-star-12"></span>
+    <span class="cross-star cross-star-13"></span>
+    <span class="cross-star cross-star-14"></span>
+    <span class="cross-star cross-star-15"></span>
+    <span class="cross-star cross-star-16"></span>
+    <span class="cross-star cross-star-17"></span>
+    <span class="cross-star cross-star-18"></span>
+  </div>
+  <div class="occult-sigils" aria-hidden="true">
+    <span class="sigil sigil-1"></span>
+    <span class="sigil sigil-2"></span>
+    <span class="sigil sigil-3"></span>
+  </div>
+  <div class="scene-artwork" aria-hidden="true"></div>
+  <canvas class="souls-canvas shooting-star-layer" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <nav class="top-bar">
+      <a class="brand" href="index.html">DOLPHWRLD</a>
+      <div class="top-nav" aria-label="Primary">
+        <a href="music.html">Music</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero-content" id="home">
+      <p class="eyebrow">SEX, MONEY, MURDER, MUSIC</p>
+      <h1>SWAZO</h1>
+
+      <div class="hero-buttons">
+        <a class="button button-primary" href="music.html">Listen Now</a>
+      </div>
+    </section>
+
+    <div class="hero-panel">
+      <p class="panel-label">Quote of the day</p>
+      <h2>HIT IT N GIVE HER A MOYNAT BAG</h2>
+      <p>Additional information and announcements will be added here soon.</p>
+    </div>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+</html>
