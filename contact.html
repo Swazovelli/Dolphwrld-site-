@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWAZO | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Cinzel:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+      background: #060606;
+      color: #f5f2eb;
+      font-family: "Cinzel", Georgia, serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-brand {
+      position: fixed;
+      top: max(1rem, env(safe-area-inset-top));
+      left: max(1rem, env(safe-area-inset-left));
+      z-index: 2;
+      padding: 0.35rem 0.2rem;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      letter-spacing: 0.28rem;
+      text-transform: uppercase;
+      text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.65),
+        0 0 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-brand:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.92);
+      outline-offset: 6px;
+    }
+
+    .contact-visual {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100svh;
+      background: #060606;
+    }
+
+    .contact-media {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .contact-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.05) 38%, rgba(0, 0, 0, 0.18) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0%, transparent 26%, transparent 74%, rgba(0, 0, 0, 0.12) 100%);
+      pointer-events: none;
+    }
+
+    .contact-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 14%;
+    }
+
+    .contact-copy {
+      position: absolute;
+      left: 50%;
+      top: 15.5%;
+      z-index: 1;
+      width: min(28rem, 39vw);
+      aspect-ratio: 1;
+      transform: translateX(-50%);
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .contact-copy text {
+      font-family: "Baloo 2", "Arial Rounded MT Bold", "Arial Black", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      fill: #f7f1de;
+      stroke: rgba(12, 10, 10, 0.95);
+      stroke-width: 1.15px;
+      stroke-linejoin: round;
+      paint-order: stroke fill;
+      filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.42));
+    }
+
+    @media (max-width: 768px) {
+      .contact-brand {
+        top: max(0.9rem, env(safe-area-inset-top));
+        left: max(0.9rem, env(safe-area-inset-left));
+        letter-spacing: 0.22rem;
+      }
+
+      .contact-image {
+        object-position: center top;
+      }
+
+      .contact-copy {
+        top: 19%;
+        width: 78vw;
+      }
+
+      .contact-copy text {
+        font-size: 13px;
+        letter-spacing: 0.2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="contact-brand" href="index.html">DOLPHWRLD</a>
+  <div class="contact-visual">
+    <picture class="contact-media">
+      <source media="(max-width: 768px)" srcset="contactpagemobile.png">
+      <img class="contact-image" src="contactpagedesktop.png" alt="">
+    </picture>
+    <svg class="contact-copy" viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <path id="contact-arc" d="M 18 75 A 32 32 0 0 1 82 75"></path>
+      </defs>
+      <text text-anchor="middle">
+        <textPath href="#contact-arc" startOffset="50%">You Cant!</textPath>
+      </text>
+    </svg>
+  </div>
+</body>
+</html>

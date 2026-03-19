@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWAZO | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+      background: #060606;
+      color: #f5f2eb;
+      font-family: "Cinzel", Georgia, serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .about-brand {
+      position: fixed;
+      top: max(1rem, env(safe-area-inset-top));
+      left: max(1rem, env(safe-area-inset-left));
+      z-index: 2;
+      padding: 0.35rem 0.2rem;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      letter-spacing: 0.28rem;
+      text-transform: uppercase;
+      text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.65),
+        0 0 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-brand:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.92);
+      outline-offset: 6px;
+    }
+
+    .about-visual {
+      display: block;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100svh;
+      background: #060606;
+    }
+
+    .about-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.04) 34%, rgba(0, 0, 0, 0.18) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0%, transparent 28%, transparent 72%, rgba(0, 0, 0, 0.18) 100%);
+      pointer-events: none;
+    }
+
+    .about-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 24%;
+    }
+
+    @media (max-width: 768px) {
+      .about-brand {
+        top: max(0.9rem, env(safe-area-inset-top));
+        left: max(0.9rem, env(safe-area-inset-left));
+        letter-spacing: 0.22rem;
+      }
+
+      .about-image {
+        object-position: center 18%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="about-brand" href="index.html">DOLPHWRLD</a>
+  <picture class="about-visual">
+    <source media="(max-width: 768px)" srcset="aboutpagemobile.png">
+    <img class="about-image" src="aboutpagedesktop.png" alt="">
+  </picture>
+</body>
+</html>

@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("intro-active");
     introVideo.addEventListener("ended", dismissIntroOverlay, { once: true });
     introVideo.addEventListener("error", dismissIntroOverlay, { once: true });
+    introOverlay.addEventListener("pointerdown", skipIntroOverlay);
     introOverlay.addEventListener("click", skipIntroOverlay);
     configureIntroSource();
     startIntroPlayback();

@@ -75,6 +75,7 @@ a {
 .intro-overlay.is-fading-out {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .intro-overlay.is-hidden {
@@ -433,6 +434,8 @@ body::after {
 }
 
 .top-bar {
+  position: relative;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -447,6 +450,8 @@ body::after {
 }
 
 .top-nav {
+  position: relative;
+  z-index: 21;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -467,6 +472,7 @@ body::after {
 
 .top-nav a {
   position: relative;
+  z-index: 22;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -474,6 +480,9 @@ body::after {
   padding: 0.65rem 0.95rem;
   border-radius: 999px;
   color: rgba(210, 215, 221, 0.82);
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition:
     color 0.25s ease,
     background 0.25s ease,
